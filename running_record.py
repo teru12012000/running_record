@@ -10,6 +10,7 @@ File_name="practice.xlsx"
 dt_time=datetime.date.today()
 text_dt=f'{dt_time.year}/{dt_time.month}/{dt_time.day}'
 sheet_name=f'{dt_time.year}年{dt_time.month}月'
+#sheet_name='test1'
 today=(int)(dt_time.day)
 last_day=calendar.monthrange(dt_time.year,dt_time.month)[1]
 menu=[
@@ -100,7 +101,7 @@ wses=wb.sheetnames
 if sheet_name in wses:
   ws=wb[sheet_name]
 else:
-  wb.create_chartsheet(title=sheet_name)
+  wb.create_sheet(title=sheet_name)
   ws=wb[sheet_name]
 #wb.save(File_name)
 #Excelの基本的なメニューの挿入
